@@ -2,7 +2,34 @@
 
 This artifact compares direct generation and State-Consistent Inference on **100 English news passages from the Reuters corpus used in CoNLL-2003**. Each input has 256 model tokens. Both methods used the same decoder. The artifact evaluates saved outputs from those runs and reports paired reconstruction scores.
 
-## Run
+## Start from a passage
+
+`review_input.py` runs the public Mamba-2 backbone on text you supply. In a Python environment with PyTorch, install the optional dependencies and try a short passage on CPU. The first live run downloads about 516 MB of backbone weights. A local copy of the same model can be passed with `--model-dir`. [Backbone and model card](https://huggingface.co/AntonV/mamba2-130m-av/tree/9f0dd145df8556bbf2de843811ccc6b49d27024d)
+
+```sh
+python -m pip install torch==2.10.0 transformers==4.57.6 rouge-score==0.1.2
+python review_input.py --text "The morning train reached the station at nine."
+```
+
+For a new passage, the live pass reports the token count, number of layers and whether the model produced a cache. The reconstruction evidence below comes from a recorded run of the research decoder. This release does not run that decoder on arbitrary text.
+
+### Inspect the Figure 4 example
+
+The archived run for passage 68 contains four outputs. ROUGE-1 F1 was 0.5510 for direct generation, 0.7359 after candidate search, 0.7381 after local repair, and 0.7359 after the EOS check. To display the archived scores and output lengths using only the Python standard library, run
+
+```sh
+python review_input.py --replay-only
+```
+
+If you have the original text of passage 68, save it as `case68.txt` in UTF-8 and run
+
+```sh
+python review_input.py --text-file case68.txt
+```
+
+The script matches the reference by SHA-256, restores the original 256-token segmentation and runs the backbone. Separately, it reads the four **historical** output texts from the saved trace, verifies their hashes and recalculates ROUGE-1 F1 and ROUGE-L F1 directly against your reference. Add `--replay-only` to skip the backbone pass. `case68.json` stores the outputs as character spans in the reference plus literal edits, so readers supply their own copy of the Reuters passage. The live cache is not used to produce the archived outputs.
+
+## Evaluate all 100 passages
 
 From the repository directory, run the following with Python 3.8 or later. Evaluation uses the standard library and runs on a CPU.
 
