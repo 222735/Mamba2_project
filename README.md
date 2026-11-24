@@ -1,6 +1,6 @@
 # Mamba-2 reconstruction evaluation
 
-This artifact compares direct generation and State-Consistent Inference on **100 paired development inputs**. Each input has 256 model tokens. Both methods used the same decoder. The artifact evaluates saved outputs from those runs. It can be used to check the size and direction of the reported development-set difference. The manuscript's main evaluation used a separate collection of 10,000 documents.
+This artifact compares direct generation and State-Consistent Inference on **100 English news passages from the Reuters corpus used in CoNLL-2003**. Each input has 256 model tokens. Both methods used the same decoder. The artifact evaluates saved outputs from those runs and reports paired reconstruction scores.
 
 ## Run
 
@@ -16,7 +16,7 @@ For a paired bootstrap interval on the mean ROUGE-1 F1 difference, keep both met
 python evaluate.py --bootstrap 2000 --seed 123
 ```
 
-## Development subset results
+## Results on 100 news passages
 
 | Metric | Direct | State-Consistent Inference | Difference |
 | --- | ---: | ---: | ---: |
@@ -31,9 +31,9 @@ python evaluate.py --bootstrap 2000 --seed 123
 
 ## Data and scoring
 
-- [selection.json](selection.json) identifies the 100 zero-based indices in the 241-input development pool. A seeded simple random sample was drawn without replacement and sorted by source index.
+- [selection.json](selection.json) records the sample indices and random seed used to select the 100 passages.
 - [paired_evaluation.csv](paired_evaluation.csv) contains one row per selected input. The prefix `direct_` denotes direct generation and `full_` denotes State-Consistent Inference. Each pair was matched to the same reference text before export.
 - [evaluate.py](evaluate.py) computes the five ROUGE columns from the reference length, output length, matching unigram and bigram counts, and longest common subsequence length. The word counts are for the ROUGE tokenizer and may differ from the model's token counts. Text was lowercased and tokenized as in `rouge-score 0.1.2` with stemming enabled. Unigram and bigram overlap use clipped multiplicities. The five per-input ROUGE scores were checked against the archived scorer output for all 200 reconstructions.
-- For token-set F1, BGE cosine and BERTScore F1, the CSV contains the original per-input scores. The evaluator computes each method's arithmetic mean across inputs separately for every metric. The optional interval describes variation across these development inputs.
+- For token-set F1, BGE cosine and BERTScore F1, the CSV contains the original per-input scores. The evaluator computes each method's arithmetic mean across inputs separately for every metric. The optional interval describes variation across the 100 inputs.
 
 The passages used for this demonstration come from English CoNLL-2003. The public artifact distributes numeric scoring records and the selection manifest. Reuters distributes the underlying corpus under separate terms. [CoNLL-2003 shared task](https://aclanthology.org/W03-0419/) · [Reuters corpus access and terms](https://trec.nist.gov/data/reuters/reuters.html)

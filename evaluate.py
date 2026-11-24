@@ -1,4 +1,4 @@
-"""Inspect paired reconstruction scores for the released development subset."""
+"""Inspect paired reconstruction scores for the released news passage sample."""
 import argparse
 import csv
 from collections import Counter
@@ -59,10 +59,10 @@ def main():
     with (HERE / "paired_evaluation.csv").open(encoding="utf-8", newline="") as file:
         rows = list(csv.DictReader(file))
     if len(rows) != 100 or len({r["source_index"] for r in rows}) != 100:
-        raise ValueError("Expected 100 different development input indices")
+        raise ValueError("Expected 100 different input indices")
     direct = list(zip(*(per_input(row, "direct") for row in rows)))
     full = list(zip(*(per_input(row, "full") for row in rows)))
-    print(f"{len(rows)} paired development inputs, 256 model tokens each\n")
+    print(f"{len(rows)} paired English news inputs (CoNLL-2003 / Reuters), 256 model tokens each\n")
     print(f"{'Metric':<15} {'Direct':>9} {'Full':>9} {'Delta':>9}")
     for label, left, right in zip(LABELS, direct, full):
         a, b = fmean(left), fmean(right)
