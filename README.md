@@ -18,6 +18,10 @@ State-Consistent Inference performs candidate search, state-consistency verifica
 
 Use Python 3.11 on Linux. GPU generation requires a CUDA-enabled PyTorch installation. The bundled PyTorch implementation also supports CPU execution.
 
+A "fast path is not available" message during model loading indicates that the bundled PyTorch implementation is being used. This is the execution path used by the supplied environment.
+
+Installation and the first run require access to PyPI, GitHub Releases and Hugging Face. Allow disk space for the Python environment, encoder, decoder and both semantic scoring models. Generation uses one input at a time; each input includes multiple candidate rollouts.
+
 ```sh
 git clone https://github.com/222735/Mamba2_project.git
 cd Mamba2_project
