@@ -1,0 +1,9 @@
+Third-party source notice
+
+src/ouroboros/models/modeling_mamba2_decoder_v2.py derives from Hugging Face Transformers 4.44.2 and the Mamba-2 decoder research fork. The source retains its copyright and Apache-2.0 notices. The Apache-2.0 license is in LICENSE-APACHE-2.0.txt.
+
+The inference orchestration and prefix compatibility helper are extracted from this project's verified research implementation. Their original numerical rules are preserved.
+
+The pretrained encoder is AntonV/mamba2-130m-av, a mirror of state-spaces/mamba2-130m. Consult its model card for upstream attribution and MIT terms.
+
+The 100 English news passages originate from the Reuters corpus used for CoNLL-2003. Corpus use remains subject to the underlying Reuters/CoNLL-2003 terms. The sample file includes exact token IDs so that decoding boundaries remain reproducible.

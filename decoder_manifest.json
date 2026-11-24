@@ -1,0 +1,9 @@
+{
+  "url": "https://github.com/222735/Mamba2_project/releases/download/reviewer-v1/decoder-clean3000.zip",
+  "archive_sha256": "3e545b5a301e9e9c492463ca281b0cab607b07e7d8aedf7a06dd793dd6a13682",
+  "archive_bytes": 516029645,
+  "files": {
+    "config.json": "331b86ba7d973b8b224e31f6bed642777e1abd4646c85ea1d606d40e2d010906",
+    "pytorch_model.bin": "9ecdb98306fef0c828a3777b6a09712e9588242f12bccb37f34358d0ec48120d"
+  }
+}

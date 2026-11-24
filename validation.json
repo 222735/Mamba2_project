@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "samples_regenerated": 1,
+  "sample_ids": [
+    0
+  ],
+  "checks": {
+    "direct_text_matches_history": true,
+    "full_text_matches_history": true
+  },
+  "generation_identity": {
+    "data_sha256": "0bd231718907919a7af1049d62ce5bc335c2240a39a3f3eda3f00c100030abc8",
+    "decoder_sha256": "9ecdb98306fef0c828a3777b6a09712e9588242f12bccb37f34358d0ec48120d",
+    "decoder_config_sha256": "331b86ba7d973b8b224e31f6bed642777e1abd4646c85ea1d606d40e2d010906",
+    "backbone_sha256": "25f6c6139aa73b899413f51081fa5310e089a0c83cbda828f9d2fad6dd0d0ee9",
+    "device": "cuda",
+    "dtype": "float32",
+    "torch": "2.3.1+cu121",
+    "engine_sha256": "ab8742d99df90b78d05c2b5cc5034549cf8b515c6609a107bebe508d348c7a4a",
+    "model_code_sha256": "2af9a5b8c4b4ced70b3f3f28499e2cb3318533661f0a829f172c412821f49b95"
+  },
+  "full_rouge1_f1": 0.8725212464589234,
+  "semantic_metrics_match_archived_with_absolute_tolerance": 2e-05,
+  "generation_seconds": 336.16254886996467,
+  "note": "One-input end-to-end acceptance test. The other 99 inputs were validated structurally but were not regenerated in this release check.",
+  "resume_preserved_output": true
+}
