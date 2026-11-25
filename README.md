@@ -20,18 +20,18 @@ Use Python 3.11 on Linux. GPU generation requires a CUDA-enabled PyTorch install
 
 A "fast path is not available" message during model loading indicates that the bundled PyTorch implementation is being used. This is the execution path used by the supplied environment.
 
-Installation and the first run require access to PyPI, GitHub Releases and Hugging Face. Allow disk space for the Python environment, encoder, decoder and both semantic scoring models. Generation uses one input at a time; each input includes multiple candidate rollouts.
+Installation and the first run require access to PyPI and Hugging Face. Allow disk space for the Python environment, encoder, decoder and both semantic scoring models. Generation uses one input at a time; each input includes multiple candidate rollouts.
+
+Download the repository ZIP from this anonymous page and extract it. Open a terminal in the extracted folder containing this README, then run:
 
 ```sh
-git clone https://github.com/222735/Mamba2_project.git
-cd Mamba2_project
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python download_decoder.py
 ```
 
-The trained decoder download is about 516 MB. The downloader verifies the archive and model files using the SHA-256 checksums in `decoder_manifest.json`. The first experiment run downloads the public encoder. Full scoring also downloads the BGE and BERTScore models.
+The repository includes the trained decoder as binary parts in `weights/` (about 516 MB total). `download_decoder.py` assembles these local parts and verifies every part, the assembled archive and both model files against the SHA-256 checksums in `decoder_manifest.json`. No external decoder download is needed. The first experiment run downloads the public encoder. Full scoring also downloads the BGE and BERTScore models.
 
 ## Run all 100 inputs
 
@@ -65,8 +65,9 @@ Scoring includes ROUGE-1 precision, recall and F1, ROUGE-2 F1, ROUGE-L F1, model
 
 ```text
 data/samples.jsonl                    100 inputs
-download_decoder.py                  Trained decoder download
-decoder_manifest.json                Weight URL and checksums
+weights/                             Trained decoder archive parts
+download_decoder.py                  Local decoder assembly and verification
+decoder_manifest.json                Weight part list and checksums
 run_experiment.py                    Input encoding and reconstruction
 score_predictions.py                 Scoring generated predictions
 requirements.txt                     Python dependencies
@@ -76,9 +77,9 @@ src/ouroboros/models/                Model implementation
 src/topk_prefix_compat_20261014.py     Exact-tie compatibility helper
 ```
 
-Downloaded weights are stored in `checkpoints/decoder/`. Experiment outputs are stored in `results/`.
+Assembled weights are stored in `checkpoints/decoder/`. Experiment outputs are stored in `results/`.
 
-The encoder is [`AntonV/mamba2-130m-av`](https://huggingface.co/AntonV/mamba2-130m-av), pinned to revision `9f0dd145df8556bbf2de843811ccc6b49d27024d`. The decoder download supplies the trained weights. Generation uses zero-initialized encoder states, FP32, TF32 disabled, BOS/EOS token 0, a 256-token output cap and independent cache copies for rollouts.
+The encoder is [`AntonV/mamba2-130m-av`](https://huggingface.co/AntonV/mamba2-130m-av), pinned to revision `9f0dd145df8556bbf2de843811ccc6b49d27024d`. The included decoder parts supply the trained weights. Generation uses zero-initialized encoder states, FP32, TF32 disabled, BOS/EOS token 0, a 256-token output cap and independent cache copies for rollouts.
 
 ## Attribution
 

@@ -1,9 +1,380 @@
 {
-  "url": "https://github.com/222735/Mamba2_project/releases/download/reviewer-v1/decoder-clean3000.zip",
   "archive_sha256": "3e545b5a301e9e9c492463ca281b0cab607b07e7d8aedf7a06dd793dd6a13682",
   "archive_bytes": 516029645,
   "files": {
     "config.json": "331b86ba7d973b8b224e31f6bed642777e1abd4646c85ea1d606d40e2d010906",
     "pytorch_model.bin": "9ecdb98306fef0c828a3777b6a09712e9588242f12bccb37f34358d0ec48120d"
-  }
+  },
+  "parts": [
+    {
+      "path": "weights/decoder-000.bin",
+      "bytes": 7000000,
+      "sha256": "586b49e539be0f67c0568fb35525608a8960314a6357f706ad710a74059c239d"
+    },
+    {
+      "path": "weights/decoder-001.bin",
+      "bytes": 7000000,
+      "sha256": "d7557a13441b692d05a1fb0652d623b47814dbb8f1c1fa4225a2f396d677ccf3"
+    },
+    {
+      "path": "weights/decoder-002.bin",
+      "bytes": 7000000,
+      "sha256": "a9c123d7356020392f09107090b2395e243104156e8fdc64bc5817d865d09e65"
+    },
+    {
+      "path": "weights/decoder-003.bin",
+      "bytes": 7000000,
+      "sha256": "23aa5c861d7fc554f87184b147d591eabd8c8b1ce6503d6f9037597c62872738"
+    },
+    {
+      "path": "weights/decoder-004.bin",
+      "bytes": 7000000,
+      "sha256": "0a6ea686413671bfbc05c5f46fff72f30ae4b89d1e1b0756d5ce40bfe857a1f6"
+    },
+    {
+      "path": "weights/decoder-005.bin",
+      "bytes": 7000000,
+      "sha256": "521eedfebe20bac38b8d75dd75a670b2e06107df054d70d0e89ccf71083cbe78"
+    },
+    {
+      "path": "weights/decoder-006.bin",
+      "bytes": 7000000,
+      "sha256": "346f0febdfb5c4409934650e3c740f36c09949886e61765722f58b9c8f7212ce"
+    },
+    {
+      "path": "weights/decoder-007.bin",
+      "bytes": 7000000,
+      "sha256": "4039517ccb500860c53693f372a51914bdac090c7abeb01356be2fe9b54b285b"
+    },
+    {
+      "path": "weights/decoder-008.bin",
+      "bytes": 7000000,
+      "sha256": "e1b43be0cae3f0b08560224307f07c11c39dc15c058ec0ccdda3b6e5a7150079"
+    },
+    {
+      "path": "weights/decoder-009.bin",
+      "bytes": 7000000,
+      "sha256": "dce4c218b18d8aa76f22c1f28f801c77e880a37ad90245fdfcee135be4cfb322"
+    },
+    {
+      "path": "weights/decoder-010.bin",
+      "bytes": 7000000,
+      "sha256": "08055e70bc722f51b4bee5e7f89eeac4b01ae41cb41dcfea1cc6b28d6727c793"
+    },
+    {
+      "path": "weights/decoder-011.bin",
+      "bytes": 7000000,
+      "sha256": "3c20ea4efb098d1584fac42106839dd3b4b2009d629a0384df7515f4292879a2"
+    },
+    {
+      "path": "weights/decoder-012.bin",
+      "bytes": 7000000,
+      "sha256": "8b4b7fd1b6211672261ffe6a7d286cf08e0bb68466c8eaa77c224cefeb3258db"
+    },
+    {
+      "path": "weights/decoder-013.bin",
+      "bytes": 7000000,
+      "sha256": "6dcd7f80360162a9808efc8ac7c4bf2c1f5aae07d79ff257c6f272e664dfc14d"
+    },
+    {
+      "path": "weights/decoder-014.bin",
+      "bytes": 7000000,
+      "sha256": "a165a3eef9eb5d2eb8ca26534d75cf9962042b8897069a17a9be45868ce71110"
+    },
+    {
+      "path": "weights/decoder-015.bin",
+      "bytes": 7000000,
+      "sha256": "13483777f9bf091f29609daabb3321c19ede16b7b90b162f478d5e1100131de7"
+    },
+    {
+      "path": "weights/decoder-016.bin",
+      "bytes": 7000000,
+      "sha256": "eaf31b1aeecb0785b1731cfb1757e6bfd0930979f840a5bbf2f49f2ca428ec2e"
+    },
+    {
+      "path": "weights/decoder-017.bin",
+      "bytes": 7000000,
+      "sha256": "9bd011cdaba6361cec5c0a5a82191aab418fdfe73a2df7598dff5e3ef59975c7"
+    },
+    {
+      "path": "weights/decoder-018.bin",
+      "bytes": 7000000,
+      "sha256": "11db58a2cb0f0e43e089bafb22935dbf46806571e85092fce8dbd0ffddb96747"
+    },
+    {
+      "path": "weights/decoder-019.bin",
+      "bytes": 7000000,
+      "sha256": "3e1b65e328f7a3237a025530e6a03ca518df01ec37582e98c492face2770c0d1"
+    },
+    {
+      "path": "weights/decoder-020.bin",
+      "bytes": 7000000,
+      "sha256": "709a20a57029031bdf7e6bbd924cdc7dd12c6a6965bffd32259137d3e0491c51"
+    },
+    {
+      "path": "weights/decoder-021.bin",
+      "bytes": 7000000,
+      "sha256": "93d054830ffe4594d4ec6d8ea32956dfb87fb00f846f54aac4a8c034b2d03902"
+    },
+    {
+      "path": "weights/decoder-022.bin",
+      "bytes": 7000000,
+      "sha256": "9aaeca734000cbcb22188e3a9af7a99ff53906abe7705bbb181c8c6de6a6752a"
+    },
+    {
+      "path": "weights/decoder-023.bin",
+      "bytes": 7000000,
+      "sha256": "85518e0e645bf16be29a8866a343ffa05902f2a3a7cf6fe1990567ebc7749149"
+    },
+    {
+      "path": "weights/decoder-024.bin",
+      "bytes": 7000000,
+      "sha256": "44f4a6bc33f34002ff0d82425589406331815fe52095d591bba5e16a9a922ade"
+    },
+    {
+      "path": "weights/decoder-025.bin",
+      "bytes": 7000000,
+      "sha256": "2ca827ae74d080928c6f57917e6f8d40c8115fb1c080ccc3d212401687e488ad"
+    },
+    {
+      "path": "weights/decoder-026.bin",
+      "bytes": 7000000,
+      "sha256": "49c385583602c7897f661c120a4a3c694b946056d9605e1ff15576751c96dd52"
+    },
+    {
+      "path": "weights/decoder-027.bin",
+      "bytes": 7000000,
+      "sha256": "c2ce4dc5b78ea354367562c647d7ffa1fa39c392b2c5ef91a7a1bba5093c144b"
+    },
+    {
+      "path": "weights/decoder-028.bin",
+      "bytes": 7000000,
+      "sha256": "03750abd673e29afd3132f8980569a3cecd2d30a53cbbcec1864aba45bfe60ea"
+    },
+    {
+      "path": "weights/decoder-029.bin",
+      "bytes": 7000000,
+      "sha256": "8be9bfb70df8b77ae4aa36ec60584561a3a08fd305a59630177072d216672766"
+    },
+    {
+      "path": "weights/decoder-030.bin",
+      "bytes": 7000000,
+      "sha256": "5813dac3e7ca294ac6526daa4f3ef7aa16daeae296d9c08e5f66b5e48dc945f1"
+    },
+    {
+      "path": "weights/decoder-031.bin",
+      "bytes": 7000000,
+      "sha256": "aa995bd39b86d7853a820a22d188f8be17fba174c9438d3ea3169b9217da9d6e"
+    },
+    {
+      "path": "weights/decoder-032.bin",
+      "bytes": 7000000,
+      "sha256": "6fb49d98673cf6f25ae12c2e0c36a504ba3dab81339ae8df9b6b517132d4c7e3"
+    },
+    {
+      "path": "weights/decoder-033.bin",
+      "bytes": 7000000,
+      "sha256": "439a6918ec1457b31a14370b2842f1bc40b3a8949107ae999084756cce9bd8c5"
+    },
+    {
+      "path": "weights/decoder-034.bin",
+      "bytes": 7000000,
+      "sha256": "189f12559a48ad3b7a8221f867ce8f2ccefec3eeae9fc5c7649e1390e53a69e8"
+    },
+    {
+      "path": "weights/decoder-035.bin",
+      "bytes": 7000000,
+      "sha256": "9bc5c60a29ecb25d18984eaffd47777262aa802694aa201ab56144694ec01ac9"
+    },
+    {
+      "path": "weights/decoder-036.bin",
+      "bytes": 7000000,
+      "sha256": "d775aa3add0b13ab650ad1ba6d7fb85806461a07e412f96eaab6b942cac49ca4"
+    },
+    {
+      "path": "weights/decoder-037.bin",
+      "bytes": 7000000,
+      "sha256": "9cbdf594fee9da368d34f8eba7a54f8ecf3951bba4f753581d801b315ae6a3a4"
+    },
+    {
+      "path": "weights/decoder-038.bin",
+      "bytes": 7000000,
+      "sha256": "8119ffcfc298db5c7048b48805fa139ac344c855c65c3fd8319ec4eb0ca02804"
+    },
+    {
+      "path": "weights/decoder-039.bin",
+      "bytes": 7000000,
+      "sha256": "66ee0e0ccc96d4ba75b1ad225c8a6c9aa0712a6b0bb40fb66dd3140885e9335c"
+    },
+    {
+      "path": "weights/decoder-040.bin",
+      "bytes": 7000000,
+      "sha256": "54f571ecadeeea430c18df1425731901fcd3bd3f7094c17b746f3bde30fabc34"
+    },
+    {
+      "path": "weights/decoder-041.bin",
+      "bytes": 7000000,
+      "sha256": "3ae0cd9170b623d99b6f8c19f9ff76836a27325b4edf2ce216def13caa191bd9"
+    },
+    {
+      "path": "weights/decoder-042.bin",
+      "bytes": 7000000,
+      "sha256": "35f6a0d8a72f5938772c99562ed862cdfd385dd1a27823056543ef3d79a8efc0"
+    },
+    {
+      "path": "weights/decoder-043.bin",
+      "bytes": 7000000,
+      "sha256": "0960462bf505471c2d2536124c5d338b4cb3006d46b1084936b3eb40b6ed1209"
+    },
+    {
+      "path": "weights/decoder-044.bin",
+      "bytes": 7000000,
+      "sha256": "b806832e23b83141f82f028299ef99f42f410f847d3c061079ce96479f745ad3"
+    },
+    {
+      "path": "weights/decoder-045.bin",
+      "bytes": 7000000,
+      "sha256": "adc9d78308e4099d3f822cb973face90491b6292cbb8955304a6588dc4e890a7"
+    },
+    {
+      "path": "weights/decoder-046.bin",
+      "bytes": 7000000,
+      "sha256": "c3d52cfcae5c3d6cc5af7c413e8af6ba0344bc2194a64a1095b013207e7eeaf4"
+    },
+    {
+      "path": "weights/decoder-047.bin",
+      "bytes": 7000000,
+      "sha256": "8d6a2111101a367948f0cf2a28f41fd3f2049a4c991030ba1973ccf10541faef"
+    },
+    {
+      "path": "weights/decoder-048.bin",
+      "bytes": 7000000,
+      "sha256": "d01aaa4d7d730ac052edd337a6b621fa16355f2ad2e6f77243b62e1133925525"
+    },
+    {
+      "path": "weights/decoder-049.bin",
+      "bytes": 7000000,
+      "sha256": "3418318faf388fccae5eea307127b994aa0386dfc07fcbb824cccd3ef7333ba0"
+    },
+    {
+      "path": "weights/decoder-050.bin",
+      "bytes": 7000000,
+      "sha256": "7e4af3067efb5b93e9db8ba4adf2498dad566316c2d90220fc67355102db34b3"
+    },
+    {
+      "path": "weights/decoder-051.bin",
+      "bytes": 7000000,
+      "sha256": "2d67a6131b37294045a28db4ae7cd650e2599fdf64ecae91a634ad5c8c57bf36"
+    },
+    {
+      "path": "weights/decoder-052.bin",
+      "bytes": 7000000,
+      "sha256": "38f94407b4b433ad6fb69cdafbce6e60218d2b75797375bf9edf3989cf15dc6c"
+    },
+    {
+      "path": "weights/decoder-053.bin",
+      "bytes": 7000000,
+      "sha256": "f8ea1326f1c41b33fca185b551f7523881ce510197dee34d2cf75a898df80fb5"
+    },
+    {
+      "path": "weights/decoder-054.bin",
+      "bytes": 7000000,
+      "sha256": "7996f1f846872b0234f813f2ef4b510c0873c5387183c89e5487c88210c09eaf"
+    },
+    {
+      "path": "weights/decoder-055.bin",
+      "bytes": 7000000,
+      "sha256": "27a1d2b99fdc961a87c3ecfe9f1175d64a4e2fd4082703da1e7d72371648c623"
+    },
+    {
+      "path": "weights/decoder-056.bin",
+      "bytes": 7000000,
+      "sha256": "fe2d26de8d8aa8f139bf2043302db1c77455ab1b63c457acfd8750085faa86a3"
+    },
+    {
+      "path": "weights/decoder-057.bin",
+      "bytes": 7000000,
+      "sha256": "e89673df74838f4ba0655220e55632f49c41dea51eb4f8991ab78290f30b42ab"
+    },
+    {
+      "path": "weights/decoder-058.bin",
+      "bytes": 7000000,
+      "sha256": "7c27f9ce0a052f1b5923eaf1b19c03958560ead08c1b017f8b3cd20cef1bae71"
+    },
+    {
+      "path": "weights/decoder-059.bin",
+      "bytes": 7000000,
+      "sha256": "12a00797e896b7e48e3b8b82c036c9ec49fd72a4e6d7bcf1deb30cafb317f273"
+    },
+    {
+      "path": "weights/decoder-060.bin",
+      "bytes": 7000000,
+      "sha256": "c794d63cb7721d033e94d9439d9b8b9148a80b52540de3fbd6da9d66fa43ad34"
+    },
+    {
+      "path": "weights/decoder-061.bin",
+      "bytes": 7000000,
+      "sha256": "6a94d983f2908218d650aa2d05785ccbd81b0285a27c52419fe1d3bef3d577c4"
+    },
+    {
+      "path": "weights/decoder-062.bin",
+      "bytes": 7000000,
+      "sha256": "5dfa9ce32e7933fc1b1817db581b27113795b4438bc81f9757aff2ac2abe6fd2"
+    },
+    {
+      "path": "weights/decoder-063.bin",
+      "bytes": 7000000,
+      "sha256": "d0354b6c9070e8ee0ec9ebd5b25d068fa52f5294f48d01fb4d8aa78f927edbba"
+    },
+    {
+      "path": "weights/decoder-064.bin",
+      "bytes": 7000000,
+      "sha256": "cd2100cc6789bc63eedc44d93c2dd3c6346137adee29d4829a653d4764248aaf"
+    },
+    {
+      "path": "weights/decoder-065.bin",
+      "bytes": 7000000,
+      "sha256": "5a35e20fa7e3d303159c57c5f10aa33070482bc81169ce3061cae74d01a6c3bd"
+    },
+    {
+      "path": "weights/decoder-066.bin",
+      "bytes": 7000000,
+      "sha256": "9bb1965abae3752f26dd68f039b0abc05f21edc382e91148fdb99645136107a0"
+    },
+    {
+      "path": "weights/decoder-067.bin",
+      "bytes": 7000000,
+      "sha256": "eb7ccb9f4602583713a4d1c9b7fa3e712daf96e0a9279975faff8dcf0b26eff5"
+    },
+    {
+      "path": "weights/decoder-068.bin",
+      "bytes": 7000000,
+      "sha256": "a65c05be4e8d53102015386f1f682760ba11340b57b1db2f342ffa406c71dfb6"
+    },
+    {
+      "path": "weights/decoder-069.bin",
+      "bytes": 7000000,
+      "sha256": "273d0c8505c628856f9d3bd5e5069e41c67d693da5cc614982958ac52a9c3320"
+    },
+    {
+      "path": "weights/decoder-070.bin",
+      "bytes": 7000000,
+      "sha256": "2d3599d58cbb24b61281e7f2c2edf874a24a2e7ece4c6c2ee38d26c0d8ac99d1"
+    },
+    {
+      "path": "weights/decoder-071.bin",
+      "bytes": 7000000,
+      "sha256": "029e31173827b5ec01b7f5da1d312516bb0de6874689313eba398c9f0e119bd8"
+    },
+    {
+      "path": "weights/decoder-072.bin",
+      "bytes": 7000000,
+      "sha256": "d4bfd4735c5dab193fa30c4e8e3a6307ee15f6ae1b0eedbd5fd41c19233b40dc"
+    },
+    {
+      "path": "weights/decoder-073.bin",
+      "bytes": 5029645,
+      "sha256": "10e14129c680d43ae780bc2eab7d1f40beb6fff5ee854265add01a8fcd68bc1d"
+    }
+  ]
 }

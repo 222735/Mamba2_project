@@ -1,8 +1,7 @@
-"""Download and verify the trained decoder release asset."""
+"""Assemble and verify the trained decoder bundled with the anonymous artifact."""
 import hashlib
 import json
 from pathlib import Path
-import urllib.request
 import zipfile
 
 HERE = Path(__file__).resolve().parent
@@ -13,13 +12,23 @@ def main():
     folder = HERE / "checkpoints"
     folder.mkdir(exist_ok=True)
     archive = folder / "decoder.zip.part"
-    print("Downloading the trained decoder (about 516 MB).", flush=True)
-    with urllib.request.urlopen(manifest["url"], timeout=120) as response, archive.open("wb") as stream:
-        checksum = hashlib.sha256()
-        for block in iter(lambda: response.read(1024 * 1024), b""):
+    print("Assembling the bundled trained decoder (about 516 MB).", flush=True)
+    checksum = hashlib.sha256()
+    total = 0
+    with archive.open("wb") as stream:
+        for part in manifest["parts"]:
+            source = (HERE / part["path"]).resolve()
+            if not source.is_relative_to(HERE / "weights"):
+                raise ValueError("Invalid weight part path")
+            if not source.is_file():
+                raise FileNotFoundError(f"Missing {part['path']}; download and extract the full repository ZIP.")
+            block = source.read_bytes()
+            if len(block) != part["bytes"] or hashlib.sha256(block).hexdigest() != part["sha256"]:
+                raise ValueError("Decoder part checksum mismatch: " + part["path"])
             checksum.update(block)
+            total += len(block)
             stream.write(block)
-    if checksum.hexdigest() != manifest["archive_sha256"]:
+    if total != manifest["archive_bytes"] or checksum.hexdigest() != manifest["archive_sha256"]:
         raise ValueError("Decoder archive checksum mismatch")
     with zipfile.ZipFile(archive) as bundle:
         if set(bundle.namelist()) != {"decoder/" + name for name in manifest["files"]}:
