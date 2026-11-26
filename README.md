@@ -81,6 +81,10 @@ Assembled weights are stored in `checkpoints/decoder/`. Experiment outputs are s
 
 The encoder is [`AntonV/mamba2-130m-av`](https://huggingface.co/AntonV/mamba2-130m-av), pinned to revision `9f0dd145df8556bbf2de843811ccc6b49d27024d`. The included decoder parts supply the trained weights. Generation uses zero-initialized encoder states, FP32, TF32 disabled, BOS/EOS token 0, a 256-token output cap and independent cache copies for rollouts.
 
+## Paper experiment details
+
+[Experiment settings and supplementary results](docs/experimental_details.md) records the training configuration, data selection, metric definitions, full input-length results, timing distributions, and cache-perturbation comparisons. The paper's main results use 10,000 Pile-uncopyrighted documents; the runnable example dataset here contains 100 Reuters / CoNLL-2003 passages.
+
 ## Attribution
 
 The samples contain English news text from the Reuters corpus used for CoNLL-2003. See the [CoNLL-2003 shared task](https://aclanthology.org/W03-0419/) and [Reuters access and terms](https://trec.nist.gov/data/reuters/reuters.html). Corpus terms apply to the sample text. Upstream code notices and the Apache-2.0 license are included in `NOTICE.txt` and `LICENSE-APACHE-2.0.txt`.
